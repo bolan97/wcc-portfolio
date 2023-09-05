@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>WCC Portfolio - Demo Page</title>
+
+        <!-- including for some global styling -->
+        <link rel="stylesheet" href="../css/style.css">
+
+    </head>
+    <body>
+        <!-- if you have sub-pages think about adding a simple back button -->
+        <nav>
+            <a href="../">HOME</a>
+        </nav>
+        <header class="documentation-header">
+            <section class="center-text">
+                <h1>PEEK-A-BOO</h1>
+                <h2>Bo Lan</h6>
+                <p>"Through 'PEEK-A-BOO,' we are not merely observers, but also contemplators of the power dynamics between children and adults."</p> 
+            </section>
+        </header>
+
+        <main class="documentation-page">
+            <section>
+                <div class="responsive-video centered-content">
+                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/861214642?h=5bc8f76364" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section>
+                <h3>Introduction</h3>
+                <p>'PEEK-A-BOO' is more than just a design piece; it serves as a microcosm of interpersonal relationships in contemporary society. In engaging with this work, viewers are not simply bystanders; they enter into a unique interaction with the piece, experiencing the tensions and balances of power between adults and children.</p>
+                <img src="../assets/images/p2.png"/>
+            </section>
+            <section>
+                <h3>Concept and Background Research</h3>
+                <p>While PEEK-A-BOO is ostensibly a game of 'hide and seek,' the implications carried within this work are far more profound. It acts as a potent metaphor, examining the balance of power between children and adults, the tension between societal expectations and individual desires, as well as the conflict between innocence and reality.</p>
+
+                    <p> Firstly, from a sociocultural standpoint, children are often symbolized as epitomes of innocence and naivety in various traditions. Their worlds are awash with curiosity and exploration, holding an unbridled enthusiasm for the unknown. However, as they age, this curiosity and enthusiasm are often suppressed by societal responsibilities and norms. PEEK-A-BOO delves into this transformative process, posing the question: Why do we lose that innocent passion for the world as we mature?</p>
+                    
+                        <p>  Furthermore, PEEK-A-BOO offers a nuanced exploration of the concept of 'power.' In the world of children, power is typically wielded by adults, limiting their actions to predefined boundaries. Yet, when they transition into adulthood, acquiring more autonomy and 'power,' they find themselves shackled by various societal constraints, unable to truly be themselves. This prompts us to consider: Is power genuinely liberating? Or, to delve deeper, is true power not bestowed upon us by society, but something that resides within us?</p>
+                    
+                            <p> Additionally, the design inspiration behind PEEK-A-BOO incorporates the concepts of 'dynamic contradiction' and 'encapsulated dreams.' Dynamic contradiction refers to the ongoing tug-of-war between the rights and expectations of children and adults, while encapsulated dreams symbolize the innermost aspirations and desires that are stored away by the reality of societal norms, awaiting the day they can be reawakened. Through this design, PEEK-A-BOO aims to ignite these deep-seated emotions within the viewers, encouraging them to reevaluate their own positions and roles. </p>
+                    
+                                <p>  In summary, PEEK-A-BOO offers a comprehensive examination of the intricate relationships between the differing power dynamics of children and adults, societal responsibilities versus individual freedoms, and dreams in contrast to reality. It challenges our traditional understanding of power, duty, and freedom, prompting us to reassess our value systems and worldviews.</p>
+                
+                <!-- if you have a full width image try make it not too tall -->
+                <img src="../assets/images/p3.png"/>
+                
+            </section>
+            <section>
+                <h3>Technical Implementation</h3>
+
+                <!-- example of styling for three images, you can write your own styling -->
+                <!-- <div class="flex-container flex-basis-third">
+                    <div class="flex-item">
+                        <img src="../assets/images/c2.png"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/c3.png"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/c4.png"/>
+                    </div>
+                </div> -->
+                
+                <p>In the technical realization of the 'PEEK-A-BOO' installation, the engineering aspect is fundamentally pivotal, serving dual objectives of ensuring stable operation while facilitating user interaction. </p>
+                <p>Initially, I selected ESP32 as the core controller board owing to its robust processing capabilities and a plethora of peripheral interfaces. Through the implementation of OSC (Open Sound Control) signals, I successfully facilitated communication with other external modules. This mode of data transmission not only ensures stability but also exhibits exceptional real-time performance, capable of achieving millisecond-level latency. To enrich the visual experience, I utilized the particle visual capabilities within P5.js and specifically deployed shader particle techniques. This allows the installation to generate unexpected visual outcomes that mirror the dynamism of the traditional 'PEEK-A-BOO' game during user interaction. </p>
+                <p>For data interchange between ESP32 and P5.js, I adopted serial port communication, which stands as a simple yet reliable method, even in scenarios requiring extensive data transfer. Regarding the audio aspect, MaxMSP was my tool of choice for sound manipulation, primarily due to its exemplary performance in audio processing. By manipulating 'dry' and 'wet' parameters, I cultivated a rich and varied sonic environment. Concurrently, utilizing OSC reception technologies, I integrated the audio closely with other modules, allowing for a seamless fusion of sound and other functionalities. </p>
+                <p>On the physical hardware front, stepper motors control the opening and closing of the panel doors. These motors provide precise angle control and stable operation. To ensure their uninterrupted functionality, I incorporated limit-switch-based closed-loop control. This safeguarding measure serves to preclude any malfunctions stemming from unexpected external factors. In terms of coding, I took special precautions to account for a range of contingencies to ensure that the code remains stable under any circumstances. </p>
+                <p>Lastly, regarding aesthetic details, the design philosophy employed is one of minimalism imbued with finesse. The integration of previously discussed elements, such as the white mountains and perforations, endows the installation with a visual identity that is both modern and organically textured. In sum, a considerable amount of ingenuity has been invested in the technical execution of 'PEEK-A-BOO,' all with the aim of offering users an entirely novel experience.</p>
+            
+                <!-- example of styling for three images, you can write your own styling -->
+               
+                   
+
+                <!-- default flex item is for 4 & follows media query styling for home page -->
+                <!-- <div class="flex-container">
+                    <div class="flex-item">
+                        <img src="../assets/images/c6.png"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/c7.png"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/c8.png"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/c5.png"/>
+                    </div>
+                </div> -->
+         
+            </section>
+            <section>
+                <h3>Reflection and Future Development</h3>
+                <p>Confronted with the creation of 'PEEK-A-BOO,' I undeniably embarked on a meticulous contemplation concerning the rights of adults and children. While the original impetus of the work was to explore the demarcations between the two, it was only upon its completion that I realized this was not merely a superficial comparison. Rather, it serves as a microcosm reflecting the alienation, power struggles, and self-exploration prevalent in modern society.</p>
+                <p>Initially, I consider Ryū Murakami's 'Coin Locker Babies.' The protagonists of this novel, navigating their identities in a confined urban existence, interestingly resonate with the characters in 'PEEK-A-BOO,' who endeavor to define their rights within fixed spaces. This tension between spatial constraints and human exploratory impulses prompts me to ponder how we locate ourselves within a given environment.</p>
+                <p>Furthermore, from the works of Shu Lea Cheang, I glean a fresh perspective on privacy and power in the digital age. Within 'PEEK-A-BOO,' the elements of observation and being observed serve as a reminder that we exist daily in a society of 'transparency,' where every action and decision may be chronicled and evaluated.</p>
+                <p>From a technical standpoint, 'PEEK-A-BOO' has its limitations. Moving forward, I aspire to experiment more extensively with technology and material selection to enhance the interactivity with the audience. The aim is to transcend mere 'voyeurism' and facilitate a journey of profound contemplation.</p>
+                <p>Additionally, I recognize that the portrayal of children and adults in the work may perpetuate certain stereotypes. In future iterations or extended creations, I hope to deepen the relationship between the two, moving beyond the discourse on rights to encompass love, respect, and empathy.</p>
+                <p>Overall, while I take pride in 'PEEK-A-BOO,' I also acknowledge that this is merely the inauguration of a larger endeavor. Each creative process is a learning journey, and through continual refinement, I hope to imbue my work with greater depth and breadth.</p>
+                 </section>
+            <section>
+                <h3>References</h3>
+                <ul>
+                    <li>Amnesty International. “Children’s Human Rights.” Amnesty International, 2023, www.amnesty.org/en/what-we-do/child-rights/.</li>
+                    <li>“BABYLOVE by Shu Lea Cheang.” Alimomeni.net, alimomeni.net/project/babylove-by-shu-lea-cheang/. Accessed 5 Sept. 2023.</li>
+                    <li>Bowlby, John. Attachment and Loss: Attachment. 1969.</li>
+                    <li>“Magical Trail Shader - Jason Labbe - OpenProcessing.” Openprocessing.org, openprocessing.org/sketch/835887. Accessed 5 Sept. 2023.</li>
+                    <li>Murakami, Ryū. Coin Locker Babies. Kodansha Amer Incorporated, 1995.</li>
+                    <li>Piaget, Jean. “Part I: Cognitive Development in Children: Piaget Development and Learning.” Journal of Research in Science Teaching, vol. 2, no. 3, Sept. 1964, pp. 176–186.</li>
+                    <li>Wikipedia Contributors. “Matilda the Musical.” Wikipedia, Wikimedia Foundation, 7 Oct. 2019, en.wikipedia.org/wiki/Matilda_the_Musical.</li>
+                    <li>Postman, Neil. The Disappearance of Childhood. New York, N.Y., Vintage, 1994, interesi.files.wordpress.com/2017/10/disappearance.pdf.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <!-- normally information like contact details etc  -->
+            <!-- read more about semantic HTML https://www.w3schools.com/html/html5_semantic_elements.asp -->
+            
+         </footer>
+    </body>
+</html>
